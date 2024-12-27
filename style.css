@@ -1,0 +1,58 @@
+header {
+    text-align: center;
+    margin: auto;
+    font-family: Candara;
+    font-size: larger;
+}
+
+#content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    #home_p {
+        text-align: center;
+    }
+    #rec_n_cert {
+        text-align: center;
+    }
+
+}
+
+
+#btns {
+    text-align: center;
+}
+#btns button {
+    text-align: center;
+    font: "Arial";
+    font-size: large;
+    margin: auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+}
+#btns button:hover {
+    background-color:#7697f0;
+    transition: 0.7s;
+}
+
+#about_ed {
+    text-align: center;
+}
+#a {
+    text-align: center;
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-input {
+    display: block;
+}
+
+.form-error {
+    color: red;
+}

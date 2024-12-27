@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tal's Resume</title>
+    <script src="main.js" defer></script> <!-- Use defer to ensure the script runs after HTML is loaded -->
+</head>
+<body>
+    <header id="header">
+        <h1>TAL LEVI</h1>
+        <p>SOFTWARE ENGINEERING STUDENT</p>
+        <hr>
+    </header>
+    <main>
+        <section id="btns">
+            <button id="home_page" onclick="loadContent('home')">Home</button>
+            <button id="about_page" onclick="loadContent('about')">About</button>
+            <button id="project_page" onclick="loadContent('projects')">Projects</button>
+            <button id="contact_page" onclick="loadContent('contact')">Contact</button>
+        </section>
+        <br>
+        <p id="content"></p>
+    </main>
+</body>
+</html>
