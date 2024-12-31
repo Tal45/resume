@@ -1,27 +1,54 @@
-header {
-    text-align: center;
-    margin: auto;
-    font-family: Candara;
-    font-size: larger;
-}
-
-#content {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    #home_p {
-        text-align: center;
-    }
-    #rec_n_cert {
-        text-align: center;
-    }
-
+    margin-top: 150px;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 5px 0; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.credits {
+    font-size: 10px;
+}
+
+.smaller-text {
+    font-size: 13px;
+}
+
+.space-section {
+    padding: 10px 0;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.gray-bg {
+    background-color: #f5f5f5; 
+}
 
 #btns {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 35px; 
+    margin: auto;
+    width: fit-content;
 }
+
 #btns button {
-    text-align: center;
     font: "Arial";
     font-size: large;
     margin: auto;
@@ -33,26 +60,16 @@ header {
     cursor: pointer;
     height: 30px;
 }
+
 #btns button:hover {
-    background-color:#7697f0;
-    transition: 0.7s;
+    color:#008080;
+    transition: 0.1s;
 }
 
-#about_ed {
-    text-align: center;
-}
-#a {
-    text-align: center;
-}
-
-.form-row {
-    margin-bottom: 10px;
-}
-
-.form-input {
-    display: block;
-}
-
-.form-error {
-    color: red;
+.contact-ft {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 15px; 
+    gap: 15px; 
 }
