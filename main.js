@@ -1,32 +1,30 @@
-var txt = `
-Hi, my name is Tal Levi!
-I am a second-year student pursuing a B.Sc. in Computer Science.
-Throughout my academic journey, I have excelled in challenging programming courses,
-gaining proficiency in programming languages and navigating Linux operating systems.
-I am deeply motivated and enthusiastic about exploring and mastering new technologies
-in the pursuit of expanding my skill set and embracing new challenges.`;
-var speed = 45;
-var i = 0;
-var typingTimeout;
-
-
 function typeWriter() {
-  if (i < txt.length) {
-    if (txt.charAt(i) === '\n') {
-      document.getElementById("home_tw").innerHTML += "<br>";
-    } else {
-      document.getElementById("home_tw").innerHTML += txt.charAt(i);
-    }
-    i++;
-    typingTimeout = setTimeout(typeWriter, speed); 
-  } 
-}
+  const home_tw = document.getElementById("home_tw");
+  const txt = home_tw.getAttribute("data-text");
+  const cursor = document.getElementById("cursor");
+  const speed_max = 70;
+  const speed_min = 40;
+  var i = 0;
 
-function restartTypewriter() {
-  clearTimeout(typingTimeout);
-  i = 0; 
-  document.getElementById("home_tw").innerHTML = "";
-  typeWriter(); 
+  function type() {
+    if (i < txt.length) {
+      if (txt.charAt(i) === '\n') {
+        home_tw.innerHTML = home_tw.innerHTML.replace('<span id="cursor">|</span>', '') + "<br><span id='cursor'>|</span>";
+      } else {
+        home_tw.innerHTML = home_tw.innerHTML.replace('<span id="cursor">|</span>', '') + txt.charAt(i) + "<span id='cursor'>|</span>";
+      }
+
+      i++;
+      let random_speed = Math.floor(Math.random() * (speed_max - speed_min)) + speed_min;
+      if (txt.charAt(i - 1) === '.') {
+        random_speed += 10;
+      }
+      setTimeout(type, random_speed);
+    } else {
+      cursor.style.animation = "blink 1s step-end infinite";
+    }
+  }
+  type();
 }
 
 window.addEventListener('load', () => {
@@ -35,17 +33,16 @@ window.addEventListener('load', () => {
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
-  const headerHeight = document.getElementById('header').offsetHeight;
-  const sectionTop = section.offsetTop - headerHeight; 
+  const header_height = document.getElementById('header').offsetHeight;
+  const section_top = section.offsetTop - header_height; 
   window.scrollTo({
-      top: sectionTop,
+      top: section_top,
       behavior: 'smooth', 
   });
 }
 
 // Update button event listeners
 document.getElementById('home_btn').addEventListener('click', () => {
-  restartTypewriter();
   scrollToSection('home_page_main');
 });
 

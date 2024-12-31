@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tal's Resume</title>
+    <link href="style.css" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -22,70 +22,59 @@
             </a>
         </section>
     </header>
+
     <main>
-    
-        <br>
-        <div id="home_page_main" onload=typeWriter()>
-            <p id="home_tw" class = "center-text"></p>
+        <div id="home_page_main" class = "center-text space-section">
+            <p id="home_tw" data-text="
+                Hi, my name is Tal Levi!
+                I am a second-year student pursuing a B.Sc. in Computer Science.
+                Throughout my academic journey, I have excelled in challenging programming courses,
+                gaining proficiency in programming languages and navigating Linux operating systems.
+                I am deeply motivated and enthusiastic about exploring and mastering new technologies
+                in the pursuit of expanding my skill set and embracing new challenges. ">
+                <span id="cursor">|</span>
+            </p>
         </div>
 
-        <div id="about_page_main" class = "gray-bg space-section">
-            <p>
-                    <h2>Education:</h2>
-            <p>
-                <b>B.Sc. in Computer Science | The Open University | 2022 - Present</b>
-            </p>
-            <p>
-                <b>Practical Engineer in Electronic and Computer Engineering | Kinneret Academic College | 2015 - 2017<br></b>
-                GPA: 91
-            </p>
+        <div id="about_page_main" class="gray-bg space-section">
+            <h2>Education:</h2>
+            <p><b>B.Sc. in Computer Science | The Open University | 2022 - Present</b></p>
+            <p><b>Practical Engineer in Electronic and Computer Engineering | Kinneret Academic College | 2015 - 2017</b><br>GPA: 91</p>
             <hr>
             <h2>Experience:</h2>
-            <p>
-                <b>Project Management Intern | Israel Electric Corporation | November 2024 - Present</b>
-                <ul>
+            <p><b>Project Management Intern | Israel Electric Corporation | November 2024 - Present</b></p>
+            <ul>
                 <li>Assist in planning, coordinating, and monitoring computer and cybersecurity projects to ensure timely delivery and adherence to project goals.</li>
                 <li>Collaborate with cross-functional teams to streamline workflows and maintain project documentation.</li>
                 <li>Utilize project management tools to track progress, identify bottlenecks, and support successful project execution.</li>
-                </ul>
-            </p>
-
-            <p>
-                <b>PCB Quality Programmer | B.Y. Medimor LTD | October 2020 - November 2024</b>
-                <ul>
+            </ul>
+            <p><b>PCB Quality Programmer | B.Y. Medimor LTD | October 2020 - November 2024</b></p>
+            <ul>
                 <li>Proficient in SMT manufacturing processes, executing regular departmental quality tests and ensuring compliance with manufacturing standards and customer requirements.</li>
                 <li>Creation of automated PCB test programs for AOI / SPI / X-Ray machines for quality assurance.</li>
-                </ul>
-            </p>
+            </ul>
             <hr>
             <h2>Skills:</h2>
-            <p>
-            <b>Programming Languages:</b> Python, C, Java, Assembly.<br>
-            <b>Database Management:</b> MySQL.<br>
-            <b>Technologies and Frameworks:</b> Git, GitHub, Linux, NumPy.<br>
-            <b>Methods:</b> OOP, Debugging, SOLID Principles, Design Patterns.
-
+            <p><b>Programming Languages:</b> Python, C, Java, Assembly.<br>
+               <b>Database Management:</b> MySQL.<br>
+               <b>Technologies and Frameworks:</b> Git, GitHub, Linux, NumPy.<br>
+               <b>Methods:</b> OOP, Debugging, SOLID Principles, Design Patterns.</p>
             <hr>
             <h2>Military Service:</h2>
-            <p>
-            Served as a Team Leader and UAV Technician in 166 Squardon, Israeli Air Force | 2017 - 2020
-            </p>
+            <p>Served as a Team Leader and UAV Technician in 166 Squadron, Israeli Air Force | 2017 - 2020</p>
             <hr>
-            <p class = "center-text smaller-text"><b>** Recommendations and Certifications will be presented upon request **</b></p>
-            </p>
-            </p>
+            <p class="center-text smaller-text"><b>** Recommendations and Certifications will be presented upon request **</b></p>
         </div>
 
-        <div id="projects_page_main" class = "space-section">
-            <p>
-                <h2>My Projects:</h2>
-                <ul>
+        <div id="projects_page_main" class="space-section">
+            <h2>My Projects:</h2>
+            <ul>
                 <li><a href="">My Portfolio Website</a></li>
                 <li><a href="https://github.com/Tal45/Assembler-C-Project">Two Pass Assembler - C Project</a></li>
-                </ul>
-            </p>
+            </ul>
         </div>
     </main>
+
     <footer>
         <div id="contact_page_main" class="contact-ft gray-bg">
             <div class="contact-header">
@@ -105,9 +94,9 @@
                         </svg>
                     </a>
                 </div>
-                <p class = "credits">All icons courtesy of <a target="_blank" href="https://icons8.com">Icons8</a></p>
+                <p class="credits">All icons courtesy of <a target="_blank" href="https://icons8.com">Icons8</a></p>
             </div>
         </div>
-        </footer>
+    </footer>
 </body>
 </html>
