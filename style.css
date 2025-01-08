@@ -16,9 +16,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 15px; 
     margin: auto;
-    width: fit-content;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box; 
 }
 
 #btns button {
@@ -28,8 +31,11 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    height: 30px;
+    height: 30px; 
     transition: color 0.1s;
+    flex: 1 1 auto;
+    max-width: 200px; 
+    text-align: center;
 }
 
 #btns button:hover {
