@@ -82,3 +82,15 @@ body {
         opacity: 0;
     }
 }
+
+.boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; 
+  }
+  
+  .box {
+    background-color: #ffffff;
+    padding: 15px;
+  }
+  
