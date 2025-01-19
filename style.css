@@ -25,6 +25,8 @@ body {
 
 .header-content {
     text-align: center;
+    line-height: 0.9;
+    
 }
 
 h1 {
@@ -86,7 +88,6 @@ h1 {
     display: inline-block;
     width: 2px;
     height: 20px;
-    background-color: #333;
     animation: blink 0.7s infinite;
 }
 
