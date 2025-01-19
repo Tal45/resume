@@ -4,7 +4,7 @@ function typeWriter() {
   const cursor = document.getElementById("cursor");
   const speed_max = 70;
   const speed_min = 40;
-  var i = 0;
+  let i = 0;
 
   function type() {
     if (i < txt.length) {
@@ -21,41 +21,45 @@ function typeWriter() {
       }
       setTimeout(type, random_speed);
     } else {
-      cursor.style.animation = "blink 1s step-end infinite";
+      cursor.style.animation = "blink 0.7s step-end infinite";
     }
   }
   type();
 }
-
-window.addEventListener('load', () => {
-  typeWriter();
-});
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   const header_height = document.getElementById('header').offsetHeight;
   const section_top = section.offsetTop - header_height; 
   window.scrollTo({
-      top: section_top,
-      behavior: 'smooth', 
+    top: section_top,
+    behavior: 'smooth', 
   });
 }
 
-// Update button event listeners
-document.getElementById('home_btn').addEventListener('click', () => {
-  scrollToSection('home_page_main');
+function toggleMenu() {
+  const navList = document.getElementById('nav-list');
+  navList.classList.toggle('show');
+}
+
+window.addEventListener('load', () => {
+  typeWriter();
+
+  document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+
+  document.getElementById('home_btn').addEventListener('click', () => {
+    scrollToSection('home_page_main');
+  });
+
+  document.getElementById('about_btn').addEventListener('click', () => {
+    scrollToSection('about_page_main');
+  });
+
+  document.getElementById('project_btn').addEventListener('click', () => {
+    scrollToSection('projects_page_main');
+  });
+
+  document.getElementById('contact_btn').addEventListener('click', () => {
+    scrollToSection('contact_page_main');
+  });
 });
-
-document.getElementById('about_btn').addEventListener('click', () => {
-  scrollToSection('about_page_main');
-});
-
-document.getElementById('project_btn').addEventListener('click', () => {
-  scrollToSection('projects_page_main');
-});
-
-document.getElementById('contact_btn').addEventListener('click', () => {
-  scrollToSection('contact_page_main');
-});
-
-

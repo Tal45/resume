@@ -1,102 +1,210 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 150px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 #header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
-#btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
-    margin: auto;
-    flex-wrap: wrap; 
-    width: 100%;
-    padding: 10px; 
-    box-sizing: border-box; 
-}
-
-#btns button {
-    font-family: Arial, sans-serif;
-    font-size: large;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    height: 30px; 
-    transition: color 0.1s;
-    flex: 1 1 auto;
-    max-width: 200px; 
+.header-content {
     text-align: center;
 }
 
-#btns button:hover {
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#nav {
+    margin-top: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-list li {
+    margin: 0 10px;
+}
+
+#nav-list button, #nav-list a {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#nav-list button:hover, #nav-list a:hover {
     color: #008080;
 }
 
-.social-icons {
+.section {
+    padding: 80px 0;
+}
+
+#home_page_main {
+    min-height: 100vh;
     display: flex;
-    gap: 10px;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-
-.contact-ft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    gap: 15px;
-}
-
-.credits {
-    font-size: 10px;
-}
-
-.smaller-text {
-    font-size: 13px;
-}
-
-.space-section {
-    padding: 15px 0;
-}
-
-.center-text {
     text-align: center;
 }
 
-.gray-bg {
-    background-color: #f5f5f5;
+#home_tw {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #cursor {
     display: inline-block;
-    font-weight: bold;
-    animation: blink 1s step-end infinite;
+    width: 2px;
+    height: 20px;
+    background-color: #333;
+    animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-.boxcontainer {
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px; 
-  }
-  
-  .box {
-    background-color: #ffffff;
-    padding: 15px;
-  }
-  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #008080;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.credits {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    #menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-list.show {
+        display: flex;
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+}
