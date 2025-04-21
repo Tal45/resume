@@ -3,72 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tal's Resume</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tal Levi | Computer Science Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <script src="main.js" defer></script>
 </head>
 <body>
     <header id="header">
-        <div class="header-content">
-            <h1>TAL LEVI</h1>
-            <p>COMPUTER SCIENCE STUDENT</p>
+        <div class="container header-container">
+            <div class="header-content">
+                <h1>TAL LEVI</h1>
+                <p>COMPUTER SCIENCE STUDENT</p>
+            </div>
+            <nav id="nav">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-list">
+                    <li><button id="home_btn">Home</button></li>
+                    <li><button id="about_btn">About</button></li>
+                    <li><button id="project_btn">Projects</button></li>
+                    <li><button id="contact_btn">Contact</button></li>
+                    <li><a href="cv/tal_cv.pdf" download="tal_levi.pdf" class="download-btn">Download Resume</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="nav">
-            <button id="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul id="nav-list">
-                <li><button id="home_btn">Home</button></li>
-                <li><button id="about_btn">About</button></li>
-                <li><button id="project_btn">Projects</button></li>
-                <li><button id="contact_btn">Contact</button></li>
-                <li><a href="cv/tal_cv.pdf" download="tal_levi.pdf">Download Resume</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section id="home_page_main" class="section">
-            <div class="container">
-                <p id="home_tw" data-text="Hi, my name is Tal Levi!
+            <div class="container home-container">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="/assets/profimg.jfif" alt="Profile Image" class="avatar">
+                    </div>
+                    <div class="profile-content">
+                        <p id="home_tw" data-text="Hi, my name is Tal Levi!
 I am a second-year student pursuing a B.Sc. in Computer Science.
-Throughout my academic journey, I have excelled in challenging programming courses,
-gaining proficiency in programming languages and navigating Linux operating systems.
-I am deeply motivated and enthusiastic about exploring and mastering new technologies
-in the pursuit of expanding my skill set and embracing new challenges.">
-                    <span id="cursor">|</span>
-                </p>
+Throughout my academic journey, I have excelled in challenging programming courses, gaining proficiency in programming languages and navigating Linux operating systems.
+I am deeply motivated and enthusiastic about exploring and mastering new technologies in the pursuit of expanding my skill set and embracing new challenges.">
+                        </p>
+                        <div class="quick-contact">
+                            <a href="mailto:tal4456@gmail.com" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                                tal4456@gmail.com
+                            </a>
+                            <a href="tel:0528578577" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                052-857-8577
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="about_page_main" class="section">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a second-year Computer Science student working toward a B.Sc., where 
+                        I've challenged myself with advanced programming courses to build strong 
+                        skills in various languages and Linux environments. I'm always looking for the 
+                        next technology to explore, excited by the chance to broaden my expertise 
+                        and take on new challenges.
+                    </p>
+                </div>
                 <div class="grid">
                     <div class="grid-item">
-                        <h3>Education</h3>
+                        <div class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                            <h3>Education</h3>
+                        </div>
                         <div class="education-item">
                             <h4>B.Sc. in Computer Science</h4>
-                            <hr>
-                            <p>The Open University<br>2022 - Present</p>
+                            <p class="institution">The Open University</p>
+                            <p class="period">2022 - Present</p>
+                            <p class="details">Estimated Graduation Date: September 2026</p>
                         </div>
-                        <br>
                         <div class="education-item">
                             <h4>Practical Engineer in Electronic and Computer Engineering</h4>
-                            <hr>
-                            <p>Kinneret Academic College<br>2015 - 2017<br>GPA: 91</p>
+                            <p class="institution">Kinneret Academic College</p>
+                            <p class="period">2015 - 2017</p>
+                            <p class="details">GPA: 91</p>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <h3>Experience</h3>
+                        <div class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3>Experience</h3>
+                        </div>
                         <div class="experience-item">
-                            
                             <h4>Project Management Intern</h4>
-                            <hr>
-                            <p>Israel Electric Corporation<br>November 2024 - Present</p>
-                            <ul>
+                            <p class="company">Israel Electric Corporation</p>
+                            <p class="period">November 2024 - Present | Part Time</p>
+                            <ul class="experience-details">
                                 <li>Assist in planning, coordinating, and monitoring computer and cybersecurity projects</li>
                                 <li>Collaborate with cross-functional teams to streamline workflows</li>
                                 <li>Utilize project management tools to track progress and identify bottlenecks</li>
@@ -76,26 +126,83 @@ in the pursuit of expanding my skill set and embracing new challenges.">
                         </div>
                         <div class="experience-item">
                             <h4>PCB Quality Programmer</h4>
-                            <hr>
-                            <p>B.Y. Medimor LTD<br>October 2020 - November 2024</p>
-                            <ul>
+                            <p class="company">B.Y. Medimor LTD</p>
+                            <p class="period">October 2020 - November 2024</p>
+                            <ul class="experience-details">
                                 <li>Proficient in SMT manufacturing processes and quality assurance</li>
                                 <li>Creation of automated PCB test programs for AOI / SPI / X-Ray machines</li>
                             </ul>
                         </div>
                     </div>
                     <div class="grid-item">
-                        <h3>Skills</h3>
-                        <ul>
-                            <li><strong>Programming Languages:</strong> Python, C, Java, Assembly</li>
-                            <li><strong>Database Management:</strong> MySQL</li>
-                            <li><strong>Technologies and Frameworks:</strong> Git, GitHub, Linux, Selenium, Docker, NumPy</li>
-                            <li><strong>Methods:</strong> OOP, Debugging, SOLID Principles, Design Patterns</li>
-                        </ul>
+                        <div class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                                <path d="M12 2v6.5"></path>
+                                <path d="M18.4 6.5 13.5 9"></path>
+                                <path d="M8.4 14 3.5 16.5"></path>
+                                <path d="M3.5 7.5 8.4 10"></path>
+                                <path d="M13.5 15l4.9 2.5"></path>
+                                <path d="M22 12h-6.5"></path>
+                                <path d="M2 12h6.5"></path>
+                                <path d="M12 22v-6.5"></path>
+                            </svg>
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="skills-content">
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">Assembly</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Database Management</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">MySQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies and Frameworks</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Linux</span>
+                                    <span class="skill-tag">Selenium</span>
+                                    <span class="skill-tag">NumPy</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Methods</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">OOP</span>
+                                    <span class="skill-tag">Debugging</span>
+                                    <span class="skill-tag">SOLID Principles</span>
+                                    <span class="skill-tag">Design Patterns</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="grid-item">
-                        <h3>Military Service</h3>
-                        <p>Served as a Team Leader and UAV Technician in 166 Squadron, Israeli Air Force | 2017 - 2020</p>
+                        <div class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                                <path d="M15 21v-3a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path>
+                                <path d="M10 16V5"></path>
+                                <path d="M17 16v-2"></path>
+                                <path d="M19 16v-5"></path>
+                                <path d="M7 10.3C7 8.5 5.7 7 4 7"></path>
+                                <path d="M14 7.2c1.6 0 3 1.3 3 3.2"></path>
+                            </svg>
+                            <h3>Military Service</h3>
+                        </div>
+                        <div class="military-content">
+                            <h4>Team Leader and UAV Technician</h4>
+                            <p class="institution">Israeli Air Force | 166 Squadron</p>
+                            <p class="period">2017 - 2020</p>
+                        </div>
                     </div>
                 </div>
                 <p class="note"><strong>** Recommendations and Certifications will be presented upon request **</strong></p>
@@ -104,21 +211,93 @@ in the pursuit of expanding my skill set and embracing new challenges.">
 
         <section id="projects_page_main" class="section">
             <div class="container">
-                <h2>My Projects</h2>
+                <h2 class="section-title">My Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-item">
-                        <h3>My Portfolio Website</h3>
-                        <a href="https://tal45.github.io/resume/">View Project</a>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-icon">
+                                <path d="M5 3a2 2 0 0 0-2 2"></path>
+                                <path d="M19 3a2 2 0 0 1 2 2"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2"></path>
+                                <path d="M5 21a2 2 0 0 1-2-2"></path>
+                                <path d="M9 3h1"></path>
+                                <path d="M9 21h1"></path>
+                                <path d="M14 3h1"></path>
+                                <path d="M14 21h1"></path>
+                                <path d="M3 9v1"></path>
+                                <path d="M21 9v1"></path>
+                                <path d="M3 14v1"></path>
+                                <path d="M21 14v1"></path>
+                            </svg>
+                            <h3>Automatic Job Scraper</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>Docker-containerized Python project that scrapes multiple job boards to retrieve and store postings in a PostgreSQL database, automatically forwarding new listings to a Telegram channel. Optimized for Heroku's worker process to ensure streamlined, scalable deployment.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">Heroku</span>
+                            </div>
+                            <a href="https://t.me/techjobtracker_il" class="project-link" target="_blank">View Project</a>
+                        </div>
                     </div>
-                    <div class="project-item">
-                        <h3>Two Pass Assembler - C Project</h3>
-                        <p>ANSI-C Two-Pass assembler for a hypothetical assembly language.</p>
-                        <a href="https://github.com/Tal45/Assembler-C-Project">View Project</a>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-icon">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                            <h3>Open-Source Developer</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>Active participant in Ma'akaf Community contributing to open-source projects on GitHub.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Open Source</span>
+                                <span class="tech-tag">GitHub</span>
+                                <span class="tech-tag">Collaboration</span>
+                            </div>
+                            <a href="https://github.com/Tal45" class="project-link" target="_blank">View GitHub</a>
+                        </div>
                     </div>
-                    <div class="project-item">
-                        <h3>Tech Job Tracker</h3>
-                        <p>Python Selenium job scraper with PostgreSQL DB and Telegram bot, dockerized and deployed on Heroku</p>
-                        <a href="https://t.me/techjobtracker_il">View Project</a>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-icon">
+                                <path d="m18 16 4-4-4-4"></path>
+                                <path d="m6 8-4 4 4 4"></path>
+                                <path d="m14.5 4-5 16"></path>
+                            </svg>
+                            <h3>Two Pass Assembler</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>Utilized ANSI C to implement a two-pass assembler for a hypothetical assembly language. The assembler translates assembly language source code into machine code, performing lexical analysis, syntax analysis, and code generation in two passes. (C-Programming Laboratory Course)</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">Assembly</span>
+                                <span class="tech-tag">Compiler Design</span>
+                            </div>
+                            <a href="https://github.com/Tal45/Assembler-C-Project" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-icon">
+                                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                <path d="M3 9h18"></path>
+                                <path d="M9 21V9"></path>
+                            </svg>
+                            <h3>My Portfolio Website</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>Personal portfolio website showcasing my skills, projects, and experience.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <a href="https://tal45.github.io/resume/" class="project-link" target="_blank">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,25 +305,49 @@ in the pursuit of expanding my skill set and embracing new challenges.">
 
         <section id="contact_page_main" class="section">
             <div class="container">
-                <h2>Contact Me</h2>
-                <div class="social-icons">
-                    <a href="mailto:tal4456@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
-                        <img width="25" height="25" src="https://img.icons8.com/ios-filled/25/new-post.png" alt="Email Icon"/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/tal-levi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
-                            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                         </svg>
-                    </a>
-                    <a href="https://github.com/Tal45" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
-                            <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+                        <h3>Email</h3>
+                        <a href="mailto:tal4456@gmail.com">tal4456@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
-                    </a>
+                        <h3>Phone</h3>
+                        <a href="tel:0528578577">052-857-8577</a>
+                    </div>
+                    <div class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/tal-levi/" target="_blank">linkedin.com/in/tal-levi/</a>
+                    </div>
+                    <div class="contact-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Tal45" target="_blank">github.com/Tal45</a>
+                    </div>
                 </div>
-                <p class="credits">All icons courtesy of <a target="_blank" href="https://icons8.com">Icons8</a></p>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tal Levi. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
