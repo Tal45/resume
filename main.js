@@ -1,3 +1,4 @@
+document.getElementById('year').textContent = new Date().getFullYear();
 // Add theme toggle functionality
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute("data-theme") || "dark"
