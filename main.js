@@ -1,14 +1,16 @@
 document.getElementById('year').textContent = new Date().getFullYear();
-// Add theme toggle functionality
+// Set theme on initial load
+const savedTheme = localStorage.getItem("theme");
+const defaultTheme = "dark";
+const themeToUse = savedTheme || defaultTheme;
+document.documentElement.setAttribute("data-theme", themeToUse);
+
+  // Theme toggle function
 function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "dark"
-  const newTheme = currentTheme === "light" ? "dark" : "light"
-
-  document.documentElement.setAttribute("data-theme", newTheme)
-  localStorage.setItem("theme", newTheme)
-
-  // Update the toggle button icon
-  updateThemeIcon(newTheme)
+    const currentTheme = document.documentElement.getAttribute("data-theme") || defaultTheme;
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
 }
 
 function updateThemeIcon(theme) {
