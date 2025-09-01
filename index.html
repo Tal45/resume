@@ -233,7 +233,7 @@ I'm a Computer Science student working toward a B.Sc., with a passion for coding
                             <h3>Automatic Job Scraper</h3>
                         </div>
                         <div class="project-content">
-                            <p>Docker-containerized Python project that scrapes multiple job boards to retrieve and store postings in a PostgreSQL database, automatically forwarding new listings to a Telegram channel. Optimized for Heroku's worker process to ensure streamlined, scalable deployment.</p>
+                            <p>Docker-containerized Python project that scrapes multiple job boards using a hybrid architecture: Requests + BeautifulSoup for static/SSR sources and Selenium for JS/Dynamic sources. Stores to Supabase (PostgreSQL) and auto-forwards new listings to a Telegram channel; deployed as a Heroku worker.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Docker</span>
@@ -242,6 +242,32 @@ I'm a Computer Science student working toward a B.Sc., with a passion for coding
                                 <span class="tech-tag">Heroku</span>
                             </div>
                             <a href="https://t.me/techjobtracker_il" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-icon">
+                                <!-- Chat bubble -->
+                                <path d="M21 12a7 7 0 0 1-7 7h-3l-4 3v-3.5A7 7 0 1 1 21 12z"/>
+                                <!-- Shackle -->
+                                <path d="M9.5 9.5v-1a2.5 2.5 0 1 1 5 0v1"/>
+                                <!-- Lock body -->
+                                <rect x="9" y="9.5" width="6" height="5" rx="1.25"/>
+                                <!-- Keyhole -->
+                                <path d="M12 11.75v1.5"/>
+                            </svg>
+                            <h3>MessageU - Secure Messaging Service</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>End-to-end encrypted messaging service: C++ client + Python server with a custom binary protocol. Uses RSA for key exchange and AES for payloads. All data is encrypted on client side and stored with SQLite on the server. (Defensive Programming Final Project)</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">SQLite3</span>
+                                <span class="tech-tag">Crypto++</span>
+                                <span class="tech-tag">Boost.Asio</span>
+                            </div>
+                            <!-- <a href="" class="project-link" target="_blank">View Project</a> -->
                         </div>
                     </div>
                     <div class="project-card">
