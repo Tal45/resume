@@ -185,6 +185,7 @@ body {
 
 .theme-toggle-icon {
   transition: color 0.3s ease, transform 0.3s ease;
+  transform-origin: 50% 50%;
 }
 
 .theme-toggle:hover .theme-toggle-icon {
@@ -528,8 +529,8 @@ h4 {
 /* Contact Section */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
 }
 
 @media (min-width: 576px) {
@@ -547,7 +548,7 @@ h4 {
 .contact-card {
   background-color: var(--card-background);
   border-radius: 8px;
-  padding: 25px;
+  padding: 15px;
   box-shadow: 0 5px 15px var(--shadow-color);
   display: flex;
   flex-direction: column;

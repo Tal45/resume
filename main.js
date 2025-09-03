@@ -1,16 +1,15 @@
 document.getElementById('year').textContent = new Date().getFullYear();
-// Set theme on initial load
-const savedTheme = localStorage.getItem("theme");
-const defaultTheme = "dark";
-const themeToUse = savedTheme || defaultTheme;
-document.documentElement.setAttribute("data-theme", themeToUse);
 
   // Theme toggle function
 function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute("data-theme") || defaultTheme;
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
+  const currentTheme = document.documentElement.getAttribute("data-theme") || defaultTheme;
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+  updateThemeIcon(newTheme);
+  const btn = document.getElementById("theme-toggle");
+  if (btn) btn.setAttribute("aria-label", newTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
 }
 
 function updateThemeIcon(theme) {
@@ -42,21 +41,15 @@ function updateThemeIcon(theme) {
 
 // Initialize theme from localStorage or system preference
 function initializeTheme() {
-  const savedTheme = localStorage.getItem("theme")
-
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme)
-    updateThemeIcon(savedTheme)
-  } else {
-    // Check for system preference
-    const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-    if (prefersDarkMode) {
-      document.documentElement.setAttribute("data-theme", "dark")
-      localStorage.setItem("theme", "dark")
-      updateThemeIcon("dark")
-    }
-  }
+  const saved = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initial = saved || (prefersDark ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", initial);
+  updateThemeIcon(initial);
+  const btn = document.getElementById("theme-toggle");
+  if (btn) btn.setAttribute("aria-label", initial === "dark" ? "Switch to light mode" : "Switch to dark mode");
 }
+
 
 function typeWriter() {
   const home_tw = document.getElementById("home_tw")
