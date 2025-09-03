@@ -174,17 +174,25 @@ body {
 .theme-toggle {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 25px;
   cursor: pointer;
+  color: var(--primary-color);
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
 }
 
 .theme-toggle-icon {
-  color: var(--primary-color);
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle:hover .theme-toggle-icon {
   transform: rotate(30deg);
+}
+
+.theme-toggle svg {
+  stroke: currentColor;
 }
 
 /* Section Styles */
@@ -608,10 +616,5 @@ footer {
 
   .section {
     padding: 80px 0;
-  }
-
-  .theme-toggle {
-    margin-right: 0;
-    margin-left: auto;
   }
 }
