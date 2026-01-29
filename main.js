@@ -198,6 +198,9 @@ window.addEventListener("load", () => {
 
   // Setup smooth scrolling
   setupSmoothScrolling()
+
+  // Reveal obfuscated emails
+  revealEmails()
 })
 
 // Add resize event listener to handle menu visibility
@@ -209,3 +212,19 @@ window.addEventListener("resize", () => {
     }
   }
 })
+
+function revealEmails() {
+  const emailLinks = document.querySelectorAll(".email-obfuscate")
+  emailLinks.forEach((link) => {
+    const user = link.getAttribute("data-user")
+    const domain = link.getAttribute("data-domain")
+    if (user && domain) {
+      const email = user + "@" + domain
+      link.href = "mailto:" + email
+      const textSpan = link.querySelector(".email-text")
+      if (textSpan) {
+        textSpan.textContent = email
+      }
+    }
+  })
+}
